@@ -3,6 +3,7 @@ package com.app.org.cyclic;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
+//Evaluate Result
 public class EvaluationBarrier implements Runnable {
 
 	public static final CyclicBarrier newBarrier = new CyclicBarrier(3);
