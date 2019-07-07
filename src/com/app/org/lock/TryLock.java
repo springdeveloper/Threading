@@ -11,12 +11,12 @@ public class TryLock implements Task {
 		Thread t = Thread.currentThread();
 
 		try {
-			boolean flag = lock.tryLock(3000, TimeUnit.MILLISECONDS);
+			boolean flag = lock.tryLock(100, TimeUnit.MILLISECONDS);
 			if (flag) {
 				System.out.println("hiiiiiiiiiiiiii");
 
 				try {
-					Thread.sleep(200);
+					Thread.sleep(4000);
 					System.out.println(Thread.currentThread().getName() + ": Lock acquired.");
 					System.out.println("Performing task...");
 					System.out.println("Hold Count =  " + lock.getHoldCount());

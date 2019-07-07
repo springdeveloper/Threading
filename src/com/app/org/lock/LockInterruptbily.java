@@ -10,9 +10,9 @@ public class LockInterruptbily implements Task {
 		try {
 			lock.lockInterruptibly();
 			if(lock.getQueueLength()==3)
+				lock.lock();
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
@@ -22,7 +22,8 @@ public class LockInterruptbily implements Task {
 			System.out.println("Waiting Thread" + lock.getQueueLength());
 		} finally {
 			System.out.println(Thread.currentThread().getName() + ": Lock released.");
-
+             lock.unlock();
+			lock.unlock();
 			lock.unlock();
 			System.out.println("Hold Count Unlock =  " + lock.getHoldCount());
 

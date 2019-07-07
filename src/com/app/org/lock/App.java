@@ -12,7 +12,7 @@ public class App {
 		TryLock app2 = new TryLock();
         Task t=new LockInterruptbily();  
 		for (int i = 0; i < 5; i++) {
-			service.execute(new Worker(t));
+			service.execute(new Worker(app2));
 		}
 		service.shutdown();
 	}
