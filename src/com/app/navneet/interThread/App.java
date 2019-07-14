@@ -1,6 +1,5 @@
 package com.app.navneet.interThread;
 
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class App extends Thread{
