@@ -11,7 +11,7 @@ public class UncaughtExceptionHandler implements java.lang.Thread.UncaughtExcept
 		      System.out.printf("Stack Trace: \n");
 		      e.printStackTrace(System.out);
 		      System.out.printf("Thread status: %s\n", t.getState());
-		      new Thread(new Task()).start();
+		    //  new Thread(new Task()).start();
 		   }   
 	}
 
